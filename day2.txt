@@ -1,0 +1,169 @@
+Q1 What is an Operating System and what all functions are provided by
+Operating System?
+
+An Operating System acts as a communication bridge (interface) 
+between the user and computer hardware. The purpose of an
+operating system is to provide a platform on which a user
+can execute programs in a convenient and efficient manner. 
+
+Important functions of an operating System: 
+
+1.Security – 
+The operating system uses password protection to 
+protect user data and similar other techniques. 
+it also prevents unauthorized access to programs and user data. 
+
+ 
+2.Control over system performance – 
+Monitors overall system health to help improve performance.
+ records the response time between service requests
+ and system response to having a complete view of the system health.
+This can help improve performance by providing important information
+ needed to troubleshoot problems. 
+ 
+2.Job accounting – 
+Operating system Keeps track of time and resources used by various 
+tasks and users, this information can be used to track resource 
+usage for a particular user or group of users. 
+ 
+4.Error detecting aids – 
+The operating system constantly monitors the system to detect errors
+ and avoid the malfunctioning of a computer system. 
+ 
+5.Coordination between other software and users – 
+Operating systems also coordinate and assign interpreters,
+ compilers, assemblers, and other software to the various
+ users of the computer systems. 
+ 
+6.Memory Management – 
+The operating system manages the Primary Memory or Main Memory.
+ Main memory is made up of a large array of bytes or words where 
+each byte or word is assigned a certain address. 
+ 
+
+
+ 
+ 
+
+7.Processor Management – 
+In a multi-programming environment, the OS decides the order 
+in which processes have access to the processor, and how
+ much processing time each process has. This function of
+ OS is called process scheduling. 
+
+
+ 
+
+8.Device Management – 
+An OS manages device communication via their respective drivers. 
+It performs the following activities for device management.
+ Keeps track of all devices connected to the system. 
+
+
+9.File Management – 
+A file system is organized into directories for efficient
+
+ or easy navigation and usage. These directories may 
+contain other directories and other files.
+
+
+======================================================
+Q2 What is a process? Explain Priority Scheduling and Round
+Robin(RR) Scheduling algorithms.
+
+A process is basically a program in execution. 
+The execution of a process must progress in a sequential fashion.
+
+
+A Process Scheduler schedules different processes to
+ be assigned to the CPU based on particular scheduling algorithms.
+ There are six popular process scheduling algorithms 
+
+
+1.First-Come, First-Served (FCFS) Scheduling
+2.Shortest-Job-Next (SJN) Scheduling
+3.Priority Scheduling
+4.Shortest Remaining Time
+5.Round Robin(RR) Scheduling
+6.Multiple-Level Queues Scheduling
+ 
+----------------------------------
+3.Priority Scheduling-
+
+
+
+
+1.Priority scheduling is a non-preemptive algorithm 
+and one of the most common scheduling algorithms in batch systems.
+
+
+2.Each process is assigned a priority. 
+Process with highest priority is to be executed first and so on.
+
+
+3.Processes with same priority are executed on first come first served basis.
+
+
+4.Priority can be decided based on memory requirements,
+ time requirements or any other resource requirement.
+
+Given: 
+1.Table of processes,
+2 and their Arrival time,
+3.Execution time, 
+4.and priority. 
+----------------------------------------------------------
+
+ 
+Round Robin Scheduling-
+
+1.Round Robin is the preemptive process scheduling algorithm.
+
+2.Each process is provided a fix time to execute, it is called a quantum.
+
+3.Once a process is executed for a given time period, 
+it is preempted and other process executes for a given time period.
+
+4.Context switching is used to save states of preempted processes.
+======================================================================
+Q3 List some basic features of Linux Operating System.
+
+LINUX is also an example of operating system. Linux was developed 
+
+from UNIX to make the source code available on the internet.
+
+Features-
+
+1. Multiuser Operating System :
+
+
+2. Multi Tasking Operating System :
+
+
+3. Multi Programming Operating System : 
+
+
+4. Virtual Memory : 
+
+5. X Window System :
+
+6. Networking Facility :
+
+7. File Security :
+
+8. Low Cost : 
+
+9. GNU Software :
+
+10. Virus Free :
+
+===========================================
+
+Q4 What is Kernel in Linux ?
+
+ The Linux kernel is the foundation of the Linux 
+computer operating system. A kernel is the lowest
+ level of software that can interface with computer
+ hardware. All
+ Linux applications and servers also interface with the Linux kernel.
+ 
