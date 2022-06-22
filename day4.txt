@@ -1,0 +1,119 @@
+Q1.Explain 3-Tier Architecture
+===========================
+
+A three-tier architecture is a client-server architecture
+ in which the functional process logic, data access,
+ computer data storage and user interface are developed 
+and maintained as independent modules on separate platforms.
+Three-tier architecture allows any one of the three tiers to be 
+upgraded or replaced independently.
+-----------------------------------------------------
+
+The user interface is implemented on any platform such as a desktop PC, 
+smartphone or tablet as a native application, web app, mobile app, 
+voice interface, etc. It uses a standard graphical user interface 
+with different modules running on the application server.
+
+The relational database management system on the database 
+server contains the computer data storage logic.
+
+The middle tiers are usually multitiered.
+
+Since the three are not physical but logical in nature, 
+they may run in different servers both in on-premises based solutions,
+ as well as in software-as-a-service (SaaS).
+
+================================================
+Q2. Explain Basic Terminologies
+1) Replication:
+2) Consistency
+3) Eventual consistency
+4) Availability
+5) Sharding
+-----------------------------------------------------------
+1) Replication:
+Data replication is the process of copying data from one location to another. 
+The technology helps an organization possess up-to-date copies of its data
+ in the event of a disaster.
+
+Replication can take place over a storage area network,
+ local area network or local wide area network, as well as to the cloud. 
+For disaster recovery (DR) purposes, replication typically 
+occurs between a primary storage location and a secondary offsite location.
+
+-------------------------------------------------------
+2) Consistency-
+Consistency (or Correctness) in database systems refers to the
+ requirement that any given database transaction must change 
+affected data only in allowed ways. Any data written to the 
+database must be valid according to all defined rules, 
+including constraints, cascades, triggers, and any combination thereof. 
+------------------------------------------------------------------
+3) Eventual consistency-
+Eventual consistency is a consistency model used in distributed
+ computing to achieve high availability that informally guarantees 
+that, if no new updates are made to a given data item, eventually
+ all accesses to that item will return the last updated value. 
+Eventual consistency, also called optimistic replication, 
+-------------------------------------------------------------
+4) Availability-
+Network availability, also known as network uptime,
+ is a measure of how well a computer network—whether
+ a local area network (LAN) or a wide-area network 
+(WAN)—can respond to the connectivity and performance demands placed on it.
+---------------------------------------------------------
+5) Sharding-
+Sharding is a database partitioning technique used by 
+blockchain companies with the purpose of scalability,
+ enabling them to process more transactions per second. 
+Sharding splits a blockchain company’s entire network 
+into smaller partitions, known as “shards.” Each shard 
+is comprised of its own data, making it distinctive 
+and independent when compared to other shards.
+=======================================================
+Q3.What is CAP Theorem
+The CAP theorem applies a similar type of logic to distributed systems—namely, 
+that a distributed system can deliver only two of three desired
+ characteristics: consistency, availability,
+ and partition tolerance (the ‘C,’ ‘A’ and ‘P’ in CAP).
+
+1.Consistency
+Consistency means that all clients see the same data at the same time,
+ no matter which node they connect to. For this to happen, whenever
+ data is written to one node, it must be instantly forwarded 
+or replicated to all the other nodes in the system before the write is deemed ‘successful.’
+
+2.Availability
+Availability means that that any client making a request for data gets a 
+response, even if one or more nodes are down. Another way to state 
+this—all working nodes in the distributed system return a valid 
+response for any request, without exception.
+
+3.Partition tolerance
+A partition is a communications break within a distributed 
+system—a lost or temporarily delayed connection between two nodes.
+ Partition tolerance means that the cluster must continue to 
+work despite any number of communication breakdowns between nodes in the system.
+
+ ==================================================================
+Q4. What are Public and Private Keys? How are they used in
+Cryptography?
+
+The private key is used to both encrypt and decrypt the data. 
+This key is shared between the sender and receiver
+ of the encrypted sensitive information. 
+The private key is also called symmetric
+ being common for both parties.
+ Private key cryptography is faster 
+than public-key cryptography mechanism.
+-------------------------------------------
+
+The public key is used to encrypt and a private 
+key is used decrypt the data. The private key is
+ shared between the sender and receiver of the 
+encrypted sensitive information. 
+The public key is also called asymmetric cryptography.
+
+=============================================================
+
+
