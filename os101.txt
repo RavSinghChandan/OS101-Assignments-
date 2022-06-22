@@ -1,0 +1,134 @@
+Q1.Explain what is Loose Coupling and Tight Coupling. Also show the
+examples of code having tight coupling and how you can make it loosely
+coupled.?
+Tight Coupling
+----------------
+Tight coupling is when a group of classes are highly dependent on one another.
+
+This scenario arises when a class assumes
+1. too many responsibilities,
+
+ 2.or when one concern is spread over many classes rather than having its own class.
+
+Loose Coupling
+---------------
+Loose coupling is achieved by means of a design that promotes 
+1.single-responsibility and 
+2.separation of concerns.
+
+A loosely-coupled class can be consumed and tested independently of other (concrete) classes.
+------------------
+1.Interfaces are a powerful tool to use for decoupling.
+
+2.Classes can communicate through interfaces rather than other concrete classes,
+ and any class can be on the other 
+
+3.end of that communication simply by implementing the interface. 
+eg-
+ class CustomerRepository
+{
+    private readonly Database database;
+
+    public CustomerRepository(Database database)
+    {
+        this.database = database;
+    }
+
+    public void Add(string CustomerName)
+    {
+        database.AddRow("Customer", CustomerName);
+    }
+}
+
+class Database
+{
+    public void AddRow(string Table, string Value)
+    {
+    }
+}
++\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+loose coupling-
+class CustomerRepository
+{
+    private readonly IDatabase database;
+
+    public CustomerRepository(IDatabase database)
+    {
+        this.database = database;
+    }
+
+    public void Add(string CustomerName)
+    {
+        database.AddRow("Customer", CustomerName);
+    }
+}
+
+interface IDatabase
+{
+    void AddRow(string Table, string Value);
+}
+
+class Database implements IDatabase
+{
+    public void AddRow(string Table, string Value)
+    {
+    }
+}
+=================================================================================
+Q2.What is High cohesion and how is it helpful?
+
+
+
+High cohesion is when you have a class that does a well defined job.
+
+Low cohesion is when a class does a lot of jobs that don't have much in common.
+
+eg-
+
+We have a class that adds two numbers, but the same class creates a window displaying the result.
+This is a low cohesive class because the window and the adding operation don't have much in common. 
+
+The window is the visual part of the program and the adding function is the logic behind it.
+
+To create a high cohesive solution, you would have to create a class Window and a class Sum. 
+The window will call Sum's method to get the result and display it.
+ This way you will develop separately the logic and the GUI of your application.
+
+
+==========================================================================================
+Q3 State KISS and YAGNI principle
+KISS--
+
+The KISS principle states that most systems work best if they are kept simple rather
+ than made complicated; therefore, simplicity should be a key goal in design, 
+and unnecessary complexity should be avoided.
+
+Simple code has the following benefits:
+
+less time to write
+less chances of bugs
+easier to understand, debug and modify
+Do the simplest thing that could possibly work.
+
+Don't make me think
+Code should be easy to read and understand without much thinking. 
+If it isn't then there is a prospect of simplification.
+
+YAGNI-
+You Aren't Gonna Need It (YAGNI) is an Extreme Programming (XP) practice which states: 
+"Always implement things when you actually need them, never when you 
+just foresee that you need them."
+
+Even if you're totally, totally, totally sure that you'll need a feature,
+ later on, don't implement it now. Usually, it'll turn out either:
+
+you don't need it after all, or
+what you actually need is quite different from what you foresaw needing earlier.
+This doesn't mean you should avoid building flexibility into your code. 
+It means you shouldn't overengineer something based on what you think you might need later on.
+
+There are two main reasons to practice YAGNI:
+
+You save time because you avoid writing code that you turn out not to need.
+Your code is better because you avoid polluting it with 'guesses'
+ that turn out to be more or less wrong but stick around anyway.
