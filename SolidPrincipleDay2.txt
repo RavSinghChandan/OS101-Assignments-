@@ -1,0 +1,73 @@
+1.Q1. Suppose you are creating a program and you encounter a situation where you
+have an unsorted array in which you have to apply binary search.But we know BS
+can be applied only on the sorted array.
+================================================================
+package com.q1;
+
+public  interface BinarySearch {
+ public void bubblSort(int [] array,int key );
+ public void selectionSort(int [] array, int key);
+ public void mergeSort(int [] array, int key);
+ public void quickSort(int [] array,int key);
+ 
+}
+
+------------------------------------
+public class selectionSort implements BinarySearch {
+	public  void selectionSort(int [] array,int key ) {
+		System.out.println("Array sorted using selectionSort");
+	}
+}
+
+public class mergeSort implements BinarySearch {
+	public  void mergeSort(int [] array,int key ) {
+		System.out.println("Array sorted using mergeSort");
+	}
+}
+
+public class quickSort implements BinarySearch {
+	public  void quickSortt(int [] array,int key ) {
+		System.out.println("Array sorted using quickSort");
+	}
+}
+===========================================================================
+Q2. Explain the Liscov’s Substitution and dependency Inversion principle with an example..
+
+
+To understand the Liskov Substitution Principle,
+ we must first understand the Open/Closed Principle (the “O” from SOLID).
+
+The goal of the Open/Closed principle encourages us 
+to design our software so we add new features only 
+by adding new code.
+
+
+ When this is possible, we have loosely coupled, 
+and thus easily maintainable applications.
+----------------------------------------------
+public abstract class Account {
+    protected abstract void deposit(BigDecimal amount);
+
+    /**
+     * Reduces the balance of the account by the specified amount
+     * provided given amount > 0 and account meets minimum available
+     * balance criteria.
+     *
+     * @param amount
+     */
+    protected abstract void withdraw(BigDecimal amount);
+}
+And, let's define the BankingAppWithdrawalService:
+
+public class BankingAppWithdrawalService {
+    private Account account;
+
+    public BankingAppWithdrawalService(Account account) {
+        this.account = account;
+    }
+
+    public void withdraw(BigDecimal amount) {
+        account.withdraw(amount);
+    }
+}
+=======================================================
