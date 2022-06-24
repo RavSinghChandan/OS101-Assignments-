@@ -1,0 +1,37 @@
+Q.1 There is a BNP(bank note press) that needs three different sizes of
+papers s1, s2 and s3 to print money of the denominations 10, 100 and 1000
+respectively. The BNP gives orders to the paper manufacturer by mentioning
+one of the denominations, and the manufacturer supplies the corresponding
+size of paper.
+E.g. input ->100 ⇒ output-> s2 Implement this scenario using one of the
+design patterns.
+========================================================================
+package com.q1;
+
+public class CurrencyFactory {
+	 
+	
+public static Object createCurrency( String size){
+	if(size.equals("s1")) {
+		return 100;
+	}else if(size.equals("s2")) {
+		return 200;
+	}else if(size.equals("s3")) {
+		return 1000;
+	}else {
+		  throw new UnsupportedOperationException("size not available");
+	}
+}
+}
+-------------------------------------------------------------
+package com.q1;
+
+public class FactoryPattern {
+ public static void main(String []args) {
+	 System.out.println(CurrencyFactory.createCurrency("s1" ));
+	 System.out.println(CurrencyFactory.createCurrency("s2" ));
+	 System.out.println(CurrencyFactory.createCurrency("s3" ));
+	 System.out.println(CurrencyFactory.createCurrency("s4" ));
+ }
+}
+---------------------------------------------------------------------
